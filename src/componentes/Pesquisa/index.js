@@ -1,6 +1,7 @@
 import Input from '../Input'
 import styled from 'styled-components'
 import { useState } from 'react'
+import { Button } from 'antd'
 // import { getprodutos } from '../../servicos/produtos'
 // import { useEffect } from 'react'
 // import { postFavorito } from '../../servicos/favoritos'
@@ -62,7 +63,7 @@ function Pesquisa() {
                     <Paragrafo>
                     <li> {produto.nome}</li>
                     <li> <p>R${produto.value}</p></li>
-                    <li> <button>DETALHES</button> </li>
+                    <li> <Button href={`/produtos/${produto.id}/detalhes`}>Detalhes </Button> </li>
                     </Paragrafo>
                     {/* <Paragrafo>{produtos.nome}</Paragrafo> */}
                    

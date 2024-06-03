@@ -1,5 +1,6 @@
 
 import { produtos } from '../componentes/UltimosLancamentos/dadosUltimosLancamentos'
+import { Button } from 'antd'
 import styled from 'styled-components'
 
 const UltimosLancamentosContainer = styled.section`
@@ -21,6 +22,22 @@ const NovosProdutosContainer = styled.div`
 `
 const Paragrafo = styled.p `
 padding: 10px 10px
+
+`
+const CentralizaTexto = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+`
+const StyleButton = styled(Button)`
+display:flex;
+text-decoration: none;
+color: #100f0f;
+border-color: #100f0f;
+hover: none;
+.ant-checkbox:hover .ant-checkbox-inner,
+.ant-checkbox-wrapper:hover .ant-checkbox-inner,
 `
 
 function UltimosLancamentos() {
@@ -33,10 +50,12 @@ function UltimosLancamentos() {
                 {produtos.map( produto => (
                     <Paragrafo> 
                     <img src={produto.src} alt={produto.nome} width="350" height="350"/>
+                    <CentralizaTexto>
                     <li> {produto.nome}</li>
                     <li> <p>R${produto.value}</p></li>
-                    <li> <button>DETALHES</button> </li>
-                </Paragrafo>
+                    <li> <StyleButton href={`/produtos/${produto.id}/detalhes`}>Detalhes </StyleButton> </li>
+                    </CentralizaTexto>
+                    </Paragrafo>
                 )
                 )}
             

@@ -2,6 +2,7 @@ import { produtos } from './dadosUltimosLancamentos'
 import { Titulo } from '../Titulo'
 import { idAleatorio } from './dadosUltimosLancamentos'
 import styled from 'styled-components'
+import { Button } from 'antd'
 
 const UltimosLancamentosContainer = styled.section`
     background-color: #EBECEE;
@@ -24,6 +25,22 @@ const EstiloProd = styled.div`
 padding: 10px 10px;
 `
 
+const StyleButton = styled(Button)`
+    display:flex;
+    text-decoration: none;
+    color: #100f0f;
+    border-color: #100f0f;
+    hover: none;
+    .ant-checkbox:hover .ant-checkbox-inner,
+    .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+`
+const CentralizaTexto = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+`
+
 function UltimosLancamentos() {
     return (
         <UltimosLancamentosContainer>
@@ -36,10 +53,12 @@ function UltimosLancamentos() {
             <NovosProdutosContainer>
                 {idAleatorio.map( produtos => (
                 <EstiloProd>
+                    <CentralizaTexto>
                     <img src={produtos.src} alt={produtos.nome} width="350" height="350"/>
                     <li> {produtos.nome}</li>
                     <li> <p>R${produtos.value}</p></li>
-                    <li> <button>DETALHES</button> </li>
+                    <li> <StyleButton href={`/produtos/${produtos.id}/detalhes`}>Detalhes </StyleButton> </li>
+                    </CentralizaTexto>
                     </EstiloProd>
                     
                 ))}

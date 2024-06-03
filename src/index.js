@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Header from './componentes/Header'
 import Favoritos from './rotas/Favoritos';
 import Produtos from './rotas/Produtos'
+import Detalhes from './rotas/Dinamica';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -40,6 +41,7 @@ root.render(
       <Route path="/produtos" element={<Produtos />} />
         <Route path="/favoritos" element={<Favoritos/>} />
         <Route path="/" element={<Home />} />
+        <Route path="/produtos/:idProduto/detalhes" element={<Detalhes/>}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

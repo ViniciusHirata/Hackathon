@@ -24,6 +24,7 @@ console.log(produtos);
 function Home() {
   return (
     <AppContainer>
+      <UltimosLancamentos />
       <Pesquisa />
       <ProdutosContainer>
        
@@ -38,7 +39,6 @@ function Home() {
                 )
               )} */}
       </ProdutosContainer>
-      <UltimosLancamentos />
       <Header />
     </AppContainer>
   );
