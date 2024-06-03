@@ -65,8 +65,6 @@ function Pesquisa() {
                     <li> <p>R${produto.value}</p></li>
                     <li> <Button href={`/produtos/${produto.id}/detalhes`}>Detalhes </Button> </li>
                     </Paragrafo>
-                    {/* <Paragrafo>{produtos.nome}</Paragrafo> */}
-                   
                 </Resultado>
             ) ) }
         </PesquisaContainer>

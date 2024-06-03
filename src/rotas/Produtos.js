@@ -4,7 +4,7 @@ import { Button } from 'antd'
 import styled from 'styled-components'
 
 const UltimosLancamentosContainer = styled.section`
-    background-color: #EBECEE;
+    background-color: #fff;
     padding-bottom: 20px;
     display: flex;
     flex-direction: row;
@@ -29,6 +29,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
+color: #100f0f;
+border-color: #100f0f;
 `
 const StyleButton = styled(Button)`
 display:flex;
@@ -40,6 +42,7 @@ hover: none;
 .ant-checkbox-wrapper:hover .ant-checkbox-inner,
 `
 
+
 function UltimosLancamentos() {
    
 
@@ -47,6 +50,7 @@ function UltimosLancamentos() {
         <UltimosLancamentosContainer>
          
             <NovosProdutosContainer>
+                    
                 {produtos.map( produto => (
                     <Paragrafo> 
                     <img src={produto.src} alt={produto.nome} width="350" height="350"/>
@@ -60,7 +64,6 @@ function UltimosLancamentos() {
                 )}
             
             </NovosProdutosContainer>
-              
         </UltimosLancamentosContainer>
     )
 }
