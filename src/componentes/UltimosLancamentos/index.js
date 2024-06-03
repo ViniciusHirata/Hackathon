@@ -1,11 +1,10 @@
-import { produtos } from './dadosUltimosLancamentos'
 import { Titulo } from '../Titulo'
 import { idAleatorio } from './dadosUltimosLancamentos'
 import styled from 'styled-components'
 import { Button } from 'antd'
 
 const UltimosLancamentosContainer = styled.section`
-    background-color: #EBECEE;
+    background-color: #fff;
     padding-bottom: 10px;
     display: flex;
     flex-direction: column;
@@ -39,6 +38,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
+border-color: ;
+border: 0.5px solid #EBECEE
 `
 
 function UltimosLancamentos() {

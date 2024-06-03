@@ -11,10 +11,16 @@ const Opcao = styled.li`
     padding: 0 5px;
     cursor: pointer;
     min-width: 150px;
+    hover: none;
+    .ant-checkbox:hover .ant-checkbox-inner,
+    .ant-checkbox-wrapper:hover .ant-checkbox-inner,
 `
 
 const Opcoes = styled.ul`
     display: flex;
+    hover: none;
+    .ant-checkbox:hover .ant-checkbox-inner,
+    .ant-checkbox-wrapper:hover .ant-checkbox-inner,
 `
 
 const textoOpcoes = ['PRODUTOS', 'FAVORITOS']

@@ -9,7 +9,7 @@ const LogoContainer = styled.div`
 
 const LogoImage = styled.img`
     margin-right: 10px;
-    width: 60%;
+    width: 80%;
 `
 
 function Logo() {
