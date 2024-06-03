@@ -1,24 +1,31 @@
-import raqueteWilsonB from '../../imagens/wilsonBlade.webp'
-import raqueteWilsonC from '../../imagens/wilsonClash.webp'
-import raqueteWilsonP from '../../imagens/wilsonPro.webp'
-import raqueteWilsonU from '../../imagens/wilsonUltra.webp'
-import raqueteiraSuper from '../../imagens/Raqueteira Super Tour 15 pack.webp'
-import raqueteiraBlade from '../../imagens/Raqueteira Blade.webp'
-import mochilaWilson from '../../imagens/Mochila Wilson.webp'
-import blusaPerformance from '../../imagens/Blusa Performace.webp'
-import blusaTour from '../../imagens/Blusa Tour U.webp'
-import bolaUsOpen from '../../imagens/Bola De Tênis Us Open.webp'
-import bolaChampionship from '../../imagens/Bola De tenis Championship.webp'
-import bolaUsOpenGreen from '../../imagens/Bola de Tenis Us Open Green.webp'
-import boneBigLogoV from '../../imagens/Boné Big Logo Vermelho.webp'
-import boneBigLogo from '../../imagens/Boné Big Logo.webp'
-import tenisRushProAce from '../../imagens/Rush Pro Ace 4.0.webp'
-import tenisRushProLite from '../../imagens/Rush Pro Lite.webp'
-import ShortPerformanceTourVerde from '../../imagens/Short Performace Tour Verde.webp'
-import ShortPerformanceTourAzul from '../../imagens/Short Performance Tour Azul.webp'
+import raqueteWilsonB from '../src/imagens/wilsonBlade.webp'
+import raqueteWilsonC from '../src/imagens/wilsonClash.webp'
+import raqueteWilsonP from '../src/imagens/wilsonPro.webp'
+import raqueteWilsonU from '../src/imagens/wilsonUltra.webp'
+import raqueteiraSuper from '../src/imagens/Raqueteira Super Tour 15 pack.webp'
+import raqueteiraBlade from '../src/imagens/Raqueteira Blade.webp'
+import mochilaWilson from '../src/imagens/Mochila Wilson.webp'
+import blusaPerformance from '../src/imagens/Blusa Performace.webp'
+import blusaTour from '../src/imagens/Blusa Tour U.webp'
+import bolaUsOpen from '../src/imagens/Bola De Tênis Us Open.webp'
+import bolaChampionship from '../src/imagens/Bola De tenis Championship.webp'
+import bolaUsOpenGreen from '../src/imagens/Bola de Tenis Us Open Green.webp'
+import boneBigLogoV from '../src/imagens/Boné Big Logo Vermelho.webp'
+import boneBigLogo from '../src/imagens/Boné Big Logo.webp'
+import tenisRushProAce from '../src/imagens/Rush Pro Ace 4.0.webp'
+import tenisRushProLite from '../src/imagens/Rush Pro Lite.webp'
+import ShortPerformanceTourVerde from '../src/imagens/Short Performace Tour Verde.webp'
+import ShortPerformanceTourAzul from '../src/imagens/Short Performance Tour Azul.webp'
+const express = require('express');
+const cors = require('cors');
+const app = express();
+const port = 8000;
 
-export const produtos = [
-    {nome: 'Wilson Blade V9', src: raqueteWilsonB, id: 1, value:`1849.90`, 
+app.use(cors());
+app.use(express.json());
+
+const produtos = [
+    {nome: 'Wilson Blade V9', src: raqueteWilsonB, id: 1, value:`1,849.90`, 
     txt:`
     Gênero: Unissex, 
 
@@ -50,7 +57,7 @@ export const produtos = [
 
     `},
 
-    {nome: 'Wulson Clash', src: raqueteWilsonC, id: 2, value:`1849.90`, 
+    {nome: 'Wulson Clash', src: raqueteWilsonC, id: 2, value:`1,849.90`, 
     txt:`
     Gênero: Unissex, 
 
@@ -82,7 +89,7 @@ export const produtos = [
 
     `},
     
-    {nome: 'Wilson ProStaff', src: raqueteWilsonP, id: 3, value:`1849.90`,
+    {nome: 'Wilson ProStaff', src: raqueteWilsonP, id: 3, value:`1,849.90`,
     txt:`
     Gênero: Unissex
 
@@ -112,7 +119,7 @@ export const produtos = [
 
     Composição: Grafite
     `},
-    {nome: 'Wilson Ultra', src: raqueteWilsonU, id: 4, value:`1849.90`,
+    {nome: 'Wilson Ultra', src: raqueteWilsonU, id: 4, value:`1,849.90`,
     txt: `
     Gênero: Unissex
 
@@ -143,7 +150,7 @@ export const produtos = [
     Composição: 95% Grafite e 5% Fibras de Vidro
 
     `},
-    {nome: 'Raqueteira Super Tour 15', src: raqueteiraSuper, id: 5, value:`1799.90`,
+    {nome: 'Raqueteira Super Tour 15', src: raqueteiraSuper, id: 5, value:`1,799.90`,
     txt:`
     Gênero: Unissex
 
@@ -155,7 +162,7 @@ export const produtos = [
 
     Composição: 100% Poliéster`},
 
-    {nome: 'Raqueteira Blade 15 ', src: raqueteiraBlade, id: 6, value:`1799.90`,
+    {nome: 'Raqueteira Blade 15 ', src: raqueteiraBlade, id: 6, value:`1,799.90`,
     txt: `
     Gênero: Unissex
 
@@ -273,7 +280,7 @@ export const produtos = [
 
     Composição: 100% Poliéster
     `},
-    {nome: 'Tênis Rush Pro Ace', src: tenisRushProAce, id: 15, value:`1199.90`,
+    {nome: 'Tênis Rush Pro Ace', src: tenisRushProAce, id: 15, value:`1,199.90`,
     txt: `
     Gênero: Masculino
 
@@ -299,18 +306,7 @@ export const produtos = [
     Superfície: All Court
     
     `},
-    {nome: 'Short Performance Tour Verde', src: ShortPerformanceTourVerde, id: 17, value:`149,90`,
-    txt: `
-Gênero: Masculino
-
-Cor: Verde
-
-Estampa: Logo em Silk
-
-Tecido: Malha
-
-Composição: 90% Poliéster - 10% Elastano
-`},
+    {nome: 'Short Performance Tour Verde', src: ShortPerformanceTourVerde, id: 17, value:`149,90`},
     {nome: 'Short Performance Tour Azul', src: ShortPerformanceTourAzul, id: 18, value:`149,90`,
         txt: `
     Gênero: Masculino
@@ -324,17 +320,23 @@ Composição: 90% Poliéster - 10% Elastano
     Composição: 90% Poliéster - 10% Elastano
     `
     }
-]
 
-//----------------FUNÇÂO PARA RANDOMIZAR OS ITENS NA PÁGINA HOME-----------
+];
 
-export const random = produtos
-console.log(produtos);
-function getRandomInt(random, numItens) {
-    const arrayEmbaralhado = produtos.sort(() => 0.5 - Math.random())
-    return arrayEmbaralhado.slice(0, numItens);
-    
+app.get('/produtos', (req, res) => {
+    res.json(produtos);
+});
+
+app.get('/produtos/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+    const produto = produtos.find(p => p.id === id);
+    if (produto) {
+        res.json(produto);
+    } else {
+        res.status(404).send('Produto não encontrado');
     }
-    
-export let idAleatorio = getRandomInt(random, 6);
-console.log(idAleatorio)
+});
+
+app.listen(port, () => {
+    console.log(`Servidor rodando em http://localhost:${port}`);
+});
